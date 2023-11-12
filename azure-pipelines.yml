@@ -15,5 +15,4 @@ steps:
 - script: |
     git remote add azure https://vijayvelraja333@dev.azure.com/vijayvelraja333/mywebapp/_git/myWebApp
     git push azure main
-  main branch name
-    displayName:'Mirror to Azure Repo'
+    displayName: 'Mirror to Azure Repo'
