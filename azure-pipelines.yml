@@ -1,0 +1,19 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- checkout: self
+
+- script: |
+    git remote add azure https://vijayvelraja333@dev.azure.com/vijayvelraja333/mywebapp/_git/myWebApp
+    git push azure main
+  main branch name
+    displayName:'Mirror to Azure Repo'
