@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- $(branch)
 
 pool:
   vmImage: ubuntu-latest
@@ -14,5 +14,5 @@ steps:
 
 - script: |
     git remote add azure https://vijayvelraja333@dev.azure.com/vijayvelraja333/mywebapp/_git/myWebApp
-    git push azure main
+    git push azure $(branch)
     displayName: 'Mirror to Azure Repo'
